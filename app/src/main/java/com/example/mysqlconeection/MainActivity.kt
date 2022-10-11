@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         var first = findViewById<Button>(R.id.first)
         var next = findViewById<Button>(R.id.next)
         var prèvies = findViewById<Button>(R.id.prev)
+        var btnLast = findViewById<Button>(R.id.btnLast)
 
         first.setOnClickListener {
 
@@ -62,6 +63,20 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"No Data Found",Toast.LENGTH_LONG).show();
             }
 
+        }
+        btnLast.setOnClickListener {
+
+            if(rs.moveToLast()){
+                edname.setText(rs.getString(1))
+                edMeaning.setText(rs.getString((2)))
+            }
+            else if(rs.moveToFirst()){
+                edname.setText(rs.getString(1))
+                edMeaning.setText(rs.getString((2)))
+            }
+            else {
+                Toast.makeText(applicationContext,"No Data Found",Toast.LENGTH_LONG).show();
+            }
         }
 
 

@@ -36,10 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        app:layout_goneMarginStart="15dp"
         android:text="First"
         app:layout_constraintBaseline_toBaselineOf="@+id/next"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginStart="15dp" />
 
     <Button
         android:id="@+id/next"
@@ -62,12 +62,13 @@
         app:layout_constraintTop_toTopOf="@+id/next" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="301dp"
-        tools:layout_editor_absoluteY="178dp" />
+        android:layout_marginStart="4dp"
+        android:text="Last"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prev"
+        app:layout_constraintStart_toEndOf="@+id/prev" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
